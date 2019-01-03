@@ -1,0 +1,17 @@
+.service {
+	margin-bottom: 2rem;
+	&:nth-child(3){
+			.service__img {order: 1}
+		}
+
+	@media #{$med-screen} {
+		margin-bottom: 4rem;
+		&:nth-child(3){
+			.service__img {order: -1}
+		}
+	}
+
+	@media #{$lrg} {
+		margin-bottom: 6rem;
+	}
+}

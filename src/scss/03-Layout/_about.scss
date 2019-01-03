@@ -1,0 +1,121 @@
+// About Page
+
+.author-info {
+    margin: 0 auto 2rem;
+    width: 14rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: flex-start;
+
+    &__img {
+        margin: 0 0 0.5rem;
+    }
+    &__links {
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap;
+        margin-bottom: .75rem;
+    }
+    &__phone, &__email {
+        padding: 0 .75rem;
+        margin: 0 auto;
+        display: block;
+    }
+    &__link, a {
+        color: $text;
+        font-weight: medium;
+        text-decoration: none;
+        text-align: center;
+        &:hover {text-decoration: underline}
+    }
+    &__social {
+        .social-link {margin: 0 0.75rem}
+        i {font-size: 1.5rem}
+    }
+
+    @media #{$med-screen}{
+        margin: 0 0 2rem; 
+        &__img{
+            width: 100%;
+        }
+    }
+}
+.about-description {margin: 0 0 2rem;}
+.about-proof {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 0 0 4rem;
+}
+.about-proof li {
+    margin: 0 0 1rem;
+    a {color: $text;}
+}
+.about-clients, .about-featured {
+    margin: 0 0 2rem;
+    flex: 0 0 50%;
+    text-align: center;
+}
+.about__list-heading {margin: 0 0 1rem}
+
+
+.about-posts {
+    @extend .section-margin;
+    &__posts {margin: 0 0 2rem}
+    &__testimonial .testimonial__body {margin: 0 0 1rem !important}
+}
+
+.wwm {
+    @extend .section-margin;
+    &__title {margin: 0 0 1rem}
+    &__subtitle {margin: 0 0 1rem}
+    &__media{
+        margin-bottom: 1rem;
+    }
+    &__text {
+        order: 1;
+        margin-bottom: 2rem;
+        p {margin: 0 0 2rem}
+        h3, h4 {margin-bottom: 1rem;}
+    }
+}
+
+.about-widget {margin-bottom: 2rem}
+
+.about-cta {
+    @extend .section-margin;
+    padding: 0 1rem;
+    &__title {
+        margin: 0 0 1rem;
+        font-weight: bold;
+    }
+}
+
+@media #{$med-screen} {
+    .author-info {
+        margin-bottom: 4rem;
+    }
+    
+    .wwm{
+        &__media{
+            margin-bottom: 0;
+        }
+        &__img {margin-bottom: 2rem;}
+    }
+}
+
+@media #{$lrg} {
+    .about-posts{
+        padding-top: 2rem;
+    }
+    .about-clients, .about-featured {
+        flex: 0 0 100%;
+        text-align: left;
+    }
+    .wwm{
+        &__subtitle {
+            margin-bottom: 2rem;
+        }
+    }
+    .about-widget {margin-bottom: 4rem}
+}

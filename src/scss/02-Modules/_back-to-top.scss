@@ -1,0 +1,27 @@
+.back-to-top{
+    background: $btn-primary-gradient;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 .25rem .25rem;
+
+    position: fixed;
+    z-index: 999;
+    bottom: 3rem;
+    left: 1rem;
+    box-shadow: $shadow-2;
+
+    &__icon{
+        color: white;
+        background: $btn-primary-gradient;
+        display: inline-block;
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+    @media #{$lrg}{
+        display: none;
+    }
+}

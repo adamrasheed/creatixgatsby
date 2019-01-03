@@ -1,0 +1,20 @@
+// Resources 
+.resource-type {
+    margin: 0 0 4rem;
+    &__title {
+        margin: 0 0 2rem;
+    }
+}
+.resource {
+    margin: 0 0 2rem;
+    &:last-of-type {margin: 0 0 0;}
+    &__title {
+        a {color: $text; text-decoration: none;}
+    }
+    &__desc {margin: 0 0 .6em}
+    
+    @media #{$xlrg} {
+        margin: 0 0 4rem;
+    }
+    
+}

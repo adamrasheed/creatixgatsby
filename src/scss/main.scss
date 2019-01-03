@@ -1,0 +1,90 @@
+
+/*
+    * Hi there, 
+    * I'm using SCSS to style the site,
+    * so if you want to take a look at the code,
+    * check out the scss files!
+*/
+
+
+
+// Global
+@import
+    '01-Global/reset',
+    '01-Global/vars',
+    '01-Global/typography',
+    '01-Global/mixins',
+    '01-Global/grid',
+    '01-Global/utilities';
+
+
+// Modules
+@import
+    '02-Modules/nav',
+    '02-Modules/mob-menu',
+    '02-Modules/article',
+    '02-Modules/_content-container',
+    '02-Modules/back-to-top',
+    '02-Modules/buttons',
+    '02-Modules/social',
+    '02-Modules/social-share',
+    '02-Modules/optin',
+    '02-Modules/tabs-nav',
+    '02-Modules/testimonial',
+    '02-Modules/case-study',
+    '02-Modules/breadcrumbs',
+    '02-Modules/pagination',
+    '02-Modules/post-preview',
+    '02-Modules/process-preview',
+    '02-Modules/posts',
+    '02-Modules/nextprev',
+    '02-Modules/section',
+    '02-Modules/sidebar',
+    '02-Modules/widgets';
+
+
+// Layout
+@import 
+    '03-Layout/header',
+    '03-Layout/hero',
+    '03-Layout/home',
+    '03-Layout/home-services',
+    '03-Layout/home-final-cta',
+    '03-Layout/about',
+    '03-Layout/blogs',
+    '03-Layout/footer';
+
+
+// Page
+@import
+    '04-Page/home',
+    '04-Page/about',
+    '04-Page/services',
+    '04-Page/process',
+    '04-Page/case-study',
+    '04-Page/roadmapping',
+    '04-Page/resources';
+
+
+
+// SASSLINE-----------------------------------
+.show-grid {
+    background-image: linear-gradient(to bottom, cyan 0, rgba(255,255,255,0) 1px);
+    background-repeat: repeat-y;
+    background-size: 100% 1rem;
+}
+
+// Sticky Nav
+.sticky-scrolling {
+    padding-top: 8rem;
+}
+
+.top {
+    height: 5.5rem;
+    display: none;
+}
+
+
+#disqus_thread {
+    margin-bottom: 4rem;
+}

@@ -1,0 +1,116 @@
+// Case Study
+.case-study{  
+    &__item {
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        height: 50vh;
+        margin-bottom: 1rem;
+    }
+    &__link {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    &__img {
+        min-width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        object-fit: cover;
+        z-index: -1;
+    }
+    &__overlay {
+        background: map-get($overlay, light);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        transition: map-get($transition, med);  
+    }
+    &__info {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+    &__title {
+        margin: 0 0 0.25rem;
+        font-weight: bold;
+    }
+    &__categories {
+        color: white;
+        margin: 0;
+    }
+    &__category {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-family: $headings;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        &:after {
+            content: ',';
+            margin: 0 0.25rem 0 0;
+        }
+        &:last-child:after {
+            content: '';
+            margin: 0;
+        }
+    }
+
+    &__featured-img{
+    	margin-bottom: 1rem;
+    }
+
+    @media #{$sml-device}{
+        &__overlay{
+            background: map-get($overlay, dark )
+
+        }
+    }
+
+    @media #{$lrg} {
+
+        &__overlay{
+            background: map-get($overlay, light )
+        }
+
+        &__item{
+            // width: 50%;
+            height: 20rem;
+            &:hover {
+                .case-study__overlay {
+                    background: map-get($overlay, dark);
+                }
+            }
+        }
+        &__img {
+            width: 100%;
+            min-height: 100%;
+        }
+        &__overlay {
+            width: 100%;
+        }
+        &__info {
+            padding: 1rem;
+        }
+
+    }
+}
+
+@media #{$lrg} {
+    .content-slider {
+        padding: 0 1rem;
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
+
+.case-studies__title {
+    flex: 100%;
+    margin-bottom: 2rem;
+}

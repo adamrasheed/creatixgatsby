@@ -1,0 +1,7 @@
+.sidebar {
+    padding: 0 1rem;
+
+    @media #{$lrg} {
+    	margin-top: .5rem;
+    }
+}

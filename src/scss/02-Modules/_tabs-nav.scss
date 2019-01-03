@@ -1,0 +1,13 @@
+.tabs-nav {
+    display: flex;
+    margin: 2rem auto 0;
+    justify-content: center;
+    &__item {
+        display: block;
+        font-size: 1.5rem;
+        color: $light-text;
+        margin: 0 1rem;
+        
+        &--active {@extend .tabs-nav__item; color: $text}
+    }
+}

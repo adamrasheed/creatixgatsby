@@ -1,0 +1,32 @@
+// Breadcrumbs
+
+.breadcrumb {
+    padding: 0 1rem;
+
+    
+    &__item {
+        display: inline-block;
+        &:after {
+            content: '\f105';
+            font-family: 'FontAwesome';
+            color: $text;
+            margin: 0 .25rem;
+        }
+        &:last-of-type a {text-decoration: underline}
+        &:last-child:after {
+            content: none;
+            margin: 0;
+        }
+    }
+    &__link {
+        color: $text;
+        text-decoration: none;
+        &:hover {text-decoration: underline}
+    }
+
+    @media #{$lrg} {
+        &__list {
+        margin: 0 0 2rem;
+        }
+    }
+}

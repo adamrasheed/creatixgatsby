@@ -1,0 +1,103 @@
+.nav-menu {
+    flex: 0 0 100%;
+    margin: 1rem 0 0;
+    display: none;
+
+    @media #{$lrg}{
+    }
+}
+
+.nav-item {
+    display: block;
+    flex: 1;
+    margin: 0;
+    &:last-of-type {
+        a {box-shadow: none;}
+    }
+}
+
+.nav-link {
+    display: block;
+    font-family: $headings;
+    font-weight: 600;
+    color: white;
+    background: $text;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    padding: 1.5rem;
+    box-shadow: inset 0 -1px 0 #9B9B9B;
+    
+    &:hover, &:focus {
+        background: white !important;
+        color: $text !important;
+    }
+
+    &--active{
+    }
+}
+
+@media #{$med-device}{
+    
+}
+
+@media #{$lrg}{
+    .nav-menu {
+        flex: 1;
+        display: block;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+    .nav-item {
+        display: inline-block;
+        flex: none;
+        margin-left: 1.5rem;
+        
+    }
+    .nav-link {
+        color: $text;
+        padding: .25rem .5rem;
+        background: none;
+        line-height: 1.5;
+        box-shadow: none;
+        
+        text-decoration: none;
+        transition: map-get($transition, short);
+
+        // &:after {visibility: hidden}
+
+        &--active{
+            &:after{
+                content: '';
+                display: block;
+                background: $text;
+                padding: 1px 0;
+                margin-top: .25rem;
+            }
+
+            &:hover:after{
+                background: lighten($text, 20%);
+            }
+        }
+
+        &:hover, &:focus {
+            background: none;
+            color: lighten($text, 20%) !important;
+        }
+    }
+
+    .header__nav--hero{
+        .nav-link {
+            color: white;
+
+            text-decoration: none;
+            transition: map-get($transition, short);
+
+            &:hover, &:focus {
+                background: none;
+                color: $text;
+            }
+        }
+    }
+}

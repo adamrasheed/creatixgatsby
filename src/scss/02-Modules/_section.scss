@@ -1,0 +1,28 @@
+// Section
+section {
+    margin-bottom: map-get($section-margin, sml);
+    @media #{$med-screen} {
+        margin-bottom: map-get($section-margin, med);
+    }
+    @media #{$lrg} {
+        margin-bottom: map-get($section-margin, lrg);
+    }
+
+}
+
+.section{
+    &__title{
+        flex: 100%;
+        margin-bottom: 1rem;
+        font-size: $font-size-large;
+
+        &:after{
+            content: '';
+            display: inline-block;
+            background: $text;
+            height: 2px;
+            width: 64px;
+            margin: 0 0 .25rem 1rem;
+        }
+    }
+}

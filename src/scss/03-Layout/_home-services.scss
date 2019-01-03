@@ -1,0 +1,45 @@
+// Home Services
+
+.section-services {
+    padding: 0 1rem;
+    @extend .section-margin;
+
+}
+.home-service {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    background-size: cover !important;
+    height: auto;
+    &__title{
+        margin-bottom: 1rem;
+    }
+    &__cta {
+        margin-top: auto;
+        margin-bottom: 0;
+        width: 100%;}
+
+    @media #{$med-screen} {
+        padding: 1.5rem 1rem 2rem;
+        height: 16rem;
+        &__title, &__body,{
+            max-width: calc(66.67% - 1rem);
+        }
+        &__cta {max-width: 16rem}
+    }
+
+    @media #{$lrg} {
+        height: 22rem;
+        flex: calc(33.333% - 1.5rem);
+        max-width: calc(100% - 3rem);
+
+        &:nth-child(3){
+            margin: 0 2rem;
+        }
+        &__title, &__body, &__cta {
+            max-width: 100%;
+        }
+    }
+}

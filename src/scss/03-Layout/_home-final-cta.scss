@@ -1,0 +1,42 @@
+// Home Final CTA
+.home-CTA {
+    background: $text;
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+        ),
+        url('../../assets/images/home-cta-background.jpg');
+    background-size: cover;
+    background-position:center bottom;
+    background-repeat: no-repeat !important;
+    padding: 2rem 0 1.5rem;
+    @med #{$med-screen} {padding: 4rem 0}
+    @media #{$lrg} {padding: 8rem 0}
+}
+.final-CTA {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column nowrap;
+
+    &__title{
+        margin-bottom: 1.5rem;
+    }
+
+    &__desc{
+        margin-bottom: 0;
+    }
+
+    @media #{$lrg} {
+        &__title {
+            margin-bottom: 2rem;
+        }
+        &__btn {
+            padding: 1.25rem;
+            width: 32rem;
+            margin-bottom: 1rem
+        }
+    }
+}

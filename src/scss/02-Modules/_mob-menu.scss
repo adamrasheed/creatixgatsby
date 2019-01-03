@@ -1,0 +1,113 @@
+.mob-menu{
+    width: 16rem;
+    background: white;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+
+    box-shadow: $shadow-2;
+
+    .social{
+        padding: 1rem 0;
+        max-width: 100%;
+        justify-content: space-around;
+
+        .social-link{
+            margin: 0 0;
+        }
+    }
+
+    transition: map-get( $transition, med );
+    transform: translateX(16.5rem);
+}
+
+.mob-nav{
+    &:first-of-type:after{
+        content: '';
+        display: block;
+        height: 1px;
+        background: $light-text;
+        width: calc(100% - 2rem);
+        margin: 1rem;
+    }
+
+    &--bottom{
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    &__list{
+        margin-bottom: 0;
+        
+    }
+    &__item{
+        font-family: $headings;
+        font-weight: bold;
+    }
+    &__link{
+        color: $text;
+        display: block;
+        text-decoration: none;
+        padding: 1rem;
+        line-height: 1;
+        width: 100%;
+        transition: map-get($transition, short);
+
+        &:hover, &:focus{
+            background: $text;
+            color: white;
+        }
+
+        &--active{
+            &:after{
+                content: '';
+                padding: 0 1px;
+                background: $primary;
+                margin-left: .25rem;
+            }
+        }
+    }
+}
+
+.mob-menu.menu-open{
+    transform: translateX(0);
+}
+
+body {
+    width: 100%;
+    height: auto;
+    transition: map-get( $transition, med );
+}
+
+.header--sticky.menu-open{
+    transform: translateX(-17rem);
+}
+
+#wrapper{
+    transition: map-get( $transition, med )
+}
+
+#wrapper.menu-open{
+    transform: translateX(-16rem);
+    height: 100vh;
+    overflow: scroll;
+}
+
+.page-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: map-get( $overlay, dark );
+    z-index: 9;
+}

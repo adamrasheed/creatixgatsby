@@ -1,0 +1,64 @@
+.nextprev {
+    margin-bottom: 2rem;
+    flex: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .next {
+        margin-left: auto;
+    }
+
+    &__link {
+        color: $text;
+        text-decoration: none;
+        flex: 0 0 48%;
+    }
+
+    &__next, &__prev {
+        font-size: $font-size-extra-small;
+        font-family: $headings;
+        font-weight: 800;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        margin-bottom: 0.5rem;
+
+        &:after{
+            content: '';
+            display: block;
+            padding: .125rem 0;
+            margin: .5rem 0;
+            @include btn-grad($secondary, $secondary2);
+        }
+    }
+
+    &__prev{
+        text-align: right;
+    }
+
+    &__title{
+        display: block;
+        margin-bottom: .25rem;
+        font-family: $headings;
+        letter-spacing: .05em;
+        font-family: 1rem;
+    }
+
+    &__desc{
+        display: block;
+    }
+
+ 
+
+    &--case-study{
+        @media #{$med-screen} {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &--only-next{
+        justify-content: flex-end;
+    }
+
+
+}

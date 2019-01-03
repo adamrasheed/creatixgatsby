@@ -1,0 +1,9 @@
+.blogs {
+    &__post {
+        margin: 0 0 4rem;
+    }
+    &__post-title {margin-bottom: 1rem;}
+    &__post-title-link {
+        &:hover, &:focus {text-decoration: underline;}
+    }
+}

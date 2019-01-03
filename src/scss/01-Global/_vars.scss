@@ -1,0 +1,113 @@
+// Variables
+
+// Fonts
+$headings: 'Avenir', 'GothamMedium', 'Montserrat', sans-serif;
+$body: 'Lora', serif;
+$btn-text: 'Avenir', 'GothamBold', 'Montserrat', sans-serif;
+$testimonial-text: 'Lora',serif;
+
+//  Sizes
+$font-size-base: 16px;
+$font-size-small: .875rem;
+$font-size-extra-small: .75rem;
+$font-size-large: 1.125rem;
+
+// Weights
+$font-weight-light: 300;
+$font-weight-bold: 700;
+
+// Colors
+$text: hsla(0, 0%, 20%, 1);
+$light-text: #9B9B9B;
+
+$btn-primary-gradient: linear-gradient(-180deg, #FF4C4C 0%, #E84545 100%);
+$btn-primary: #E84545;
+$primary: #FAD961;
+$primary2: #F76B1C;
+$btn-secondary: #4691E8;
+$secondary: #80D0C7;
+$secondary2: #0093E9;
+
+$link: $secondary2;
+
+
+@mixin btn-grad($color1, $color2) {
+    background-color: $color1;
+    background-image: linear-gradient(225deg, $color1 0%, $color2 99%);
+}
+
+$background-light: hsla(360, 100%, 0%, 0.04);
+
+//  Font-Size
+$font-size-base: 16px;
+$font-size-small: 0.75rem;
+$font-size-extra-small: 0.625rem;
+
+
+
+
+// Overlays
+$overlay: (
+    image:  rgba(0,0,0, 0.65),
+    light: rgba(0,0,0,0.35),
+    dark: rgba(0,0,0,0.65),
+);
+
+
+//Transition:
+$transition: (
+    short: all .125s ease-in-out,
+    med: all .25s ease-in-out
+);
+
+//  Shadow
+$shadow-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$shadow-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+// Media
+$sml-device:  "only screen and (min-device-width : 15rem)";
+$sml-screen:  "only screen and (min-width : 15rem)";
+
+$med-device:  "only screen and (min-device-width : 45rem)";
+$med-screen:  "only screen and (min-width : 45rem)";
+
+$lrg:  "only screen and (min-width : 60rem)";
+$lrg-device:  "only screen and (min-device-width : 60rem)";
+
+$xlrg: "only screen and (min-width : 80rem)";
+
+
+// Social
+$brands: (
+    facebook:  #3b5998,
+    twitter:   #1da1f2,
+    linkedin:  #0077b5,
+    instagram: #c13584,
+    dribbble:  #ea4c89,
+    behance:   #1769ff,
+    medium:    #00ab6b,
+    youtube:   #cd201f
+);
+    
+
+// Spacing
+$container-width: 72rem;
+$container-narrow: 40rem;
+
+$section: 4rem !important;
+
+$section-margin: (
+    sml: 4rem,
+    med: 6rem,
+    lrg: 8rem
+);
+
+.section-margin {
+    margin-bottom: map-get($section-margin, sml) !important;
+    @media #{$med-screen} {
+        margin-bottom: map-get($section-margin, med) !important;
+    }
+    @media #{$lrg} {
+        margin-bottom: map-get($section-margin, lrg) !important;
+    }
+}

@@ -1,0 +1,68 @@
+// Widgets
+.widget {
+    margin: 0 0 2.5rem;
+    &__title {
+        margin-bottom: 0;
+    }
+    &__text {
+        margin: 0 0 1.5rem;
+    }
+    p {margin-bottom: 1rem;}
+
+    &__pointer{
+        display: inline-block;
+        transform: translateY(-12px);
+        padding-left: .25rem;
+    }
+
+    &__img{
+        text-decoration: none;
+    }
+}
+.widget-about {
+    &__img {
+        display: block;
+        margin: 0 auto 0.5rem;
+        max-width: 6rem;
+        height: auto;
+        border-radius: 50%;
+    }
+}
+.widget-post {
+    &__title {
+        margin: 0 0 1rem;
+    }
+    &__post {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    &__link {
+        color: $text;
+        text-decoration: none;
+        transition: all .25s ease-in-out;
+        &:hover {
+            color: lighten($text, 15%);
+        }
+    }
+}
+
+.ck-img{
+    display: inline-block;
+    max-width: 12rem;
+    height: auto;
+}
+
+@media #{$lrg} {
+    .widget {
+        margin-bottom: 3rem;
+        &__title {
+            margin-bottom: 0.5rem;
+        }
+    }
+    .widget-about {
+        &__title {
+            font-size: 1.25rem;
+        }
+    }
+}

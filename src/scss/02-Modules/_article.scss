@@ -1,0 +1,59 @@
+// Article
+
+article {
+    p {margin: 0 0 2rem}
+    img {margin: 0 0 1rem}
+    
+}
+
+.article {
+	&__title {
+		@media #{$lrg} {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__title-link {
+		color: $text;
+		@include hoverText($text);
+	}
+
+	&--blog {
+		@media #{$lrg} {
+			margin-bottom: 4rem;
+		}
+	}
+
+	&__meta {
+		margin-bottom: 1rem;
+
+		@media #{$lrg} {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__share{
+		margin-bottom: 1rem;
+
+		@media #{$med-screen} {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__share-link{
+		margin-right: 1rem;
+		text-decoration: none;
+
+		&:hover{
+			text-decoration: underline;
+		}
+
+		&--fb{
+			color: map-get($brands, facebook);
+		}
+
+		&--twt{
+			color: map-get($brands, twitter);
+		}
+	}
+}

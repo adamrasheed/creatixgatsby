@@ -1,0 +1,139 @@
+.optin {
+    padding: 1rem;
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+    ),
+    url('../images/optin-background-original.jpg');
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    @extend .section-margin;
+    
+    &__title, &__subtitle {
+        margin-bottom: 1rem;
+        flex: 100%;
+    }
+
+    &__subtitle{
+        opacity: 0.8;
+        font-weight: 500;
+    }
+    
+    @media #{$lrg} {
+        padding: 2rem 1rem;
+    }
+    @media #{$xlrg} {
+        padding: 8rem 2rem;
+        //&__title {margin-bottom: 2rem}
+    }
+
+    &--post {
+        margin-bottom: 2rem !important;
+        .optin-form {
+
+        }
+        @media #{$xlrg} {
+            padding: 2rem 1rem;
+        }
+    }
+}
+
+.optin-form {
+    flex: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    font-size: 1rem;
+    
+    &__label, &__input, &__submit {
+        width: 100%;
+        flex: 100%;
+        border: none;
+    }
+    &__input{
+        font-size: 1rem;
+        border: none;
+        padding: .5rem;
+        margin: 0 0 1rem;
+            &:last-of-type {margin: 0}
+        border: 1px solid $btn-primary;
+        transition: all .25s ease-in-out;
+
+
+        &:focus {
+            outline: none;
+            box-shadow: inset 0 0 0 2px $btn-primary;
+        }
+    }
+
+    &__submit{
+        margin-top: .5rem;
+    }
+
+    &__input-group{
+        width: 100%;
+        flex: 100%;
+        margin-bottom: 1rem;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+
+    &__converted{
+        flex: 100%;
+    }
+    
+    @media #{$med-screen} {
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: flex-end;
+        max-width: 40rem;
+        &__label, &__input, &__submit{
+            max-width: 100%;
+            flex: 1;
+        }
+        &__label {flex: 100%}
+        &__input {
+            flex: 1;
+        }
+
+        &__input-group{
+            flex: 1;
+            padding-right: 1rem;
+
+            &:last-of-type{
+                padding-right: 0;
+                flex: 3;
+            }
+        }
+        
+        &__submit {
+            line-height: 1.25;
+            padding: .5rem .825rem;
+        }
+    }
+
+    @media #{$lrg}{
+        max-width: 56rem;
+
+        &__input-group{
+            max-width: 100%;
+            // max-width: 16rem;
+            flex: 1;
+            padding-right: 1rem;
+
+            &:last-of-type{
+                padding-right: 0;
+                flex: 1.5;
+                // margin-left: auto;
+                // max-width: 20rem;
+            }
+        }
+    }
+}

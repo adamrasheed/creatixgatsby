@@ -1,0 +1,21 @@
+.main--case-study{
+	p, h2, h3, h4, figure {
+		max-width: $container-narrow;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		height: auto;
+	}
+
+	img {
+		height: auto;
+	}
+
+	.case-study__featured-img {
+		max-width: 100%;
+	}
+
+	@media #{$med-screen}{
+		margin-bottom: 2rem;
+	}
+}

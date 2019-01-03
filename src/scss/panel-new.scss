@@ -1,0 +1,69 @@
+
+$btn-color: hsla(203, 67%, 8%, 1);
+$border: hsla(203, 27%, 19%, 1);
+$border-light: hsla(203, 27%, 19%, 0.38);
+$input-bg: hsla(203, 35%, 95%, 0.4);
+
+$text: hsla(0, 0%, 20%, 1);
+
+*{
+    font-family: 'Gotham', sans-serif;
+}
+.app {
+    background: linear-gradient(to left, #4CA1AF , #C4E0E5); /* Chrome 10-25, Safari 5.1-6 */
+}
+
+.dashboard-section, .sidebar {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.label, .marginalia, element.style {
+    color: $text;
+    letter-spacing: .05em;
+}
+
+
+.input {
+    border: 2px solid $border;
+    font-family: Lora;
+
+    &:focus {
+        border-color: #26a0da;
+    }
+}
+
+.dashboard-box {
+    border: 1px solid $border;
+    background:$input-bg;
+}
+
+span.dashboard-item-icon.dashboard-item-icon-with-border {
+    background: white;
+}
+
+.hgroup, .hgroup-title {
+    border-bottom: 0.5px solid $border-light;
+}
+
+.hgroup{
+    a:after {
+        color: $border;
+    }
+}
+
+
+.mainbar .form .buttons {
+    @media screen and (min-width: 50em) {
+        background: hsla(203, 99%, 99%, 0.18);  
+    }
+    
+
+}
+
+.btn-rounded {
+    border: 2px solid $btn-color;
+    &:hover, &:focus {
+        background:$btn-color;
+    }
+}
+

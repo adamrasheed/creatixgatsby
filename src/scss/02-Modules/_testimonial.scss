@@ -1,0 +1,64 @@
+.testimonial {
+
+    &__container{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__body {
+        font-family: $body;
+        font-size: $font-size-large;
+        line-height: 1.75rem;
+        text-align: center;
+        margin: 0 0 1.5rem;
+        p {
+            @extend .testimonial__body;
+            margin: 0 0 1rem} 
+    }
+    &__client {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        align-items: flex-start;
+    }
+    &__image {
+        display: inline-block;
+        max-width: 6rem;
+        height: auto;
+        margin: 0 auto 1.5rem;
+        border-radius: 50%;
+    }
+
+    &__client-name, &__client-link {
+        color: $text;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    &__client-link{
+        transition: map-get($transition, short);
+        max-width: 6rem;
+    }
+
+    &__client-name, &__client-site {
+        margin: 0;
+        text-align: center;
+    }
+
+    &__client-site {
+        &:before {
+            content: '|';
+            margin: 0 1rem;
+            font-family: $headings;
+            font-weight: bold;
+            font-size: inherit;
+            color: $light-text;
+        }
+    }
+    
+    &__client-link:hover {
+        color: $light-text;
+    }
+}

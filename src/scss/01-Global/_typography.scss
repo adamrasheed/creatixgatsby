@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'GothamBold';
+    src: url('../fonts/Gotham-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('../fonts/Gotham-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GothamBook';
+    src: url('../fonts/Gotham-Book.woff') format('woff');
+}
+
+body {
+    color: $text;
+    font-family: $body;
+    font-size: $font-size-base;
+    font-weight: normal;
+    line-height: 1.5;
+    position: relative;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    
+    //@extend .show-grid;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $headings;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.074rem;
+    line-height: 2.25rem;
+    margin: 0 0 1rem;
+}
+
+.mega {
+    font-size: 3rem;
+    line-height: 3.25rem;
+}
+
+h2 {
+    font-size: 1.728rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.44em;
+    line-height: 1.75rem;
+    margin-bottom: .25rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 740;
+    margin: 0 0 .25rem
+}
+
+p {
+    margin: 0 0 1.5rem;
+}
+
+a {
+    color: $link;
+    text-decoration-skip: ink;
+}
+
+ul {
+    margin: 0 0 1rem
+}
+
+
+
+label {
+    font-family: $headings;
+    font-size: .75rem;
+    line-height: 1rem;
+    opacity: .8;
+    display: block;
+    text-align: left;
+    margin: 0 0 0.5rem;
+}
+
+strong {
+    font-weight: bold
+}
+
+
+figcaption {
+    text-align: center;
+    font-size: .75rem;
+    line-height: 1rem;
+    letter-spacing: .05em;
+    opacity: .8;
+}
+
+.white {color: white}
+.center {text-align: center}
+.inline-block {display: inline-block}
+.block {display: block}
+
+.title {
+    &--flex {
+        flex: 100%;
+        padding: 0 1rem;
+        
+    }
+}
+
+@media #{$med-screen} {
+    .mega {
+        line-height: 4rem;
+    }
+}
+
+@media #{$lrg} {
+    h1, h2, h3, h4 {font-weight: 600;}
+
+    h1 {
+        font-size: 2.8rem;
+        line-height: 3.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+        margin-bottom: .5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: .25rem;
+    }
+
+    h4 {
+        font-size: 1.333rem;
+        line-height: 1.5rem;
+        //margin: 0 0 .25rem;
+    }
+
+
+    figcaption {
+        margin-bottom: 2rem;
+    }
+}

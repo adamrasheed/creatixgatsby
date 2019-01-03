@@ -1,0 +1,64 @@
+// Buttons
+
+.btn {
+    font-family: $btn-text;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    // font-variant: small-caps;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background: $text;
+    -webkit-appearance: none;
+    text-decoration: none;
+    line-height: 1;
+    letter-spacing: .1em;
+    padding: 1rem 2rem;
+    margin: 0 0 1rem;
+    transform: translateY(-4px);
+    transition: map-get($transition, short);
+    &:hover, &:focus {
+        outline: none;
+        transform: translateY(-2px);
+    }
+
+    &--full{
+        display: block;
+    }
+
+    &--small{
+        font-size: $font-size-small;
+        letter-spacing: .15em;
+        padding: .875rem 1.5rem;
+        font-variant: small-caps;
+        font-weight: $font-weight-bold;
+    }
+    
+    &--primary {
+        // background: $btn-primary;
+        @include btn-grad($primary, $primary2);
+        -webkit-appearance: none;
+        box-shadow: 0 4px 0 darken($primary2, 15%);
+        &:hover, &:focus {
+            box-shadow: 0 2px 0 darken($primary2, 15%);
+        }
+    }
+    
+    &--primary-gradient {
+        @extend .btn--primary;
+        -webkit-appearance: none;
+        background-image: $btn-primary-gradient;
+        letter-spacing: .1em;
+    }
+    
+    &--secondary {
+        @include btn-grad($secondary, $secondary2);
+        -webkit-appearance: none;
+        box-shadow: 0 4px 0 darken($secondary2, 15%);
+        &:hover, &:focus {
+            box-shadow: 0 2px 0 darken($secondary2, 15%);
+        }
+    }
+}

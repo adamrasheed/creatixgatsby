@@ -1,0 +1,66 @@
+.section-about {
+    padding: 0;
+    
+
+    &__container{
+        padding: 0 1rem;
+        display: flex;
+        justify-content: center;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+    }
+
+
+    &__content{
+        flex: 1;
+        padding-left: 1rem;
+    }
+
+    &__img-container {
+        display: block;
+        flex: 0 33.333%;
+        margin-bottom: 1.3em;
+    }
+
+    &__img{
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+
+    @media #{$med-screen} {
+        &__content{
+            padding-left: 2rem;
+        }
+    }
+
+    @media #{$lrg}{
+    }
+}
+
+.content-container{
+    &--padding {
+        padding: 0 1rem;
+    }
+    
+}
+
+.section-case-studies {
+    margin-bottom: 6rem !important;
+}
+
+.section-testimonial {
+    @extend .section-margin;
+}
+
+.section-blog {
+    &__title {flex: 100%}
+}
+
+@media #{$lrg} {
+    .content-container {
+        max-width: $container-width;
+        margin: 0 auto;
+        margin-bottom: map-get($section-margin, lrg);
+    }
+}

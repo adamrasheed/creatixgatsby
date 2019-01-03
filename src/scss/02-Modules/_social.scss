@@ -1,0 +1,32 @@
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.social-link{
+    color: $text;
+    margin: 0 1rem;
+    &__icon{
+        font-size: 1.5rem;
+        transition: map-get($transition, short);
+    }
+}
+
+@media #{$med-screen}{
+    .social-link__icon{
+        font-size: 1.25rem;
+    }
+}
+
+@each $social-link, $bgcolor in $brands {
+    .social-link--#{$social-link}:focus,
+    .social-link--#{$social-link}:hover {
+        color: $bgcolor;
+    }
+} 
+
+
+
+
